@@ -8,7 +8,7 @@ Set of instruction to solve a particular problem.
     
 ##Why programming is required ?
 We required the programming to solve specific problem.
-                                              ##What is the problem ?
+                                              ###What is the problem ?
                                               1. A task we need to solve  
                                               2. Probelm is situation 
                                                  TECHNIQUE TO SOLVE A PROBLEM
@@ -22,8 +22,8 @@ We required the programming to solve specific problem.
                                                            Arrangment - is number are (a, b) then arrangement is - c = (a + b)
                                                            Result after calculationg arrangement.
                                                            This is what - how we do programming.
-About chapter from book, chapter says
-## Problem solving technique
+##About chapter from book, chapter says
+Problem solving technique
 1. problem definotion phase(understanding the problem)
 2. getting started with problem(immediatly take action toward problem)
 3. The use of specific example (we can take example of previusly done problem)
@@ -31,7 +31,7 @@ About chapter from book, chapter says
 these are the steps for solving a probelm.
 In problem solving problem we have ALGORITHM and FLOWCHART
  
-#BASIC OF ALGORITHM  - FLOWCHART (exam 10 - 15 marks)
+##BASIC OF ALGORITHM  - FLOWCHART (exam 10 - 15 marks)
 ###What is the ALGORITHM ?
 The step by step procedure to solve any kind of problem
 Algorithm is the proceed to solve any kind of problem
@@ -47,7 +47,7 @@ STEP 4 - print the result.
 STEP 5 - Stop.
 This is first algorithm
 
-###SYMBOLS OF FLOWCHART :-
+##SYMBOLS OF FLOWCHART :-
 SHAPE            WORK      
 Ovel             start/stop
 Parallelogram      input/output
@@ -143,7 +143,7 @@ but initially there is two approaches to solve the problem
 /      \  /    \  /      \ .....
 The set of solution of subproblem is called complex solution.
 
-#BOTTOM - DOWN
+##BOTTOM - DOWN
 It comes under dyanamics problem and greedy technique.(out of syllabus)
 
 **Question - reasoning**
