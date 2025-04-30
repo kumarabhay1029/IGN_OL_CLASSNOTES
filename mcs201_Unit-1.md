@@ -1,182 +1,240 @@
-### MCS201(Programming in C and Python)
+### MCS201 (Programming in C and Python)
 
-# what is programming ?
-Set of instruction to solve a particular problem.
-    what is an instruction ?
-    1. any type of instruction that provide to computer to solve that probelem.
-    2. those input what we provides to computer.
-    
-## Why programming is required ?
-We required the programming to solve specific problem.
-### What is the problem ?**
-1. A task we need to solve. 
-2. Probelm is situation.
-    TECHNIQUE TO SOLVE A PROBLEM.
-1. understand the problem - what the probelem is ?
-2. what should be the output/result ?
-*(In programming first we need solution to take that as problem and solve in the form of programming.)*
-3. what are the basic requirment for the specific result ?
-4. Arrangment of the requirement in sequesnce in order to solve problme.
-for example - Add two numbers. 
-   Basic requirement - need two numbers.
-   Arrangment - is number are (a, b) then arrangement is - c = (a + b).
-   Result after calculationg arrangement.
-   This is what - how we do programming.
-          
-## About chapter from book, chapter says
-Problem solving technique.
-1. problem definotion phase(understanding the problem).
-2. getting started with problem(immediatly take action toward problem).
-3. The use of specific example (we can take example of previusly done problem).
-4. similiarities in the problem (what are the similarities are there ?)
-these are the steps for solving a probelm.
-In problem solving problem we have ALGORITHM and FLOWCHART.
- 
-## BASIC OF ALGORITHM  - FLOWCHART (exam 10 - 15 marks)
-### What is the ALGORITHM ?
-The step by step procedure to solve any kind of problem.
-Algorithm is the proceed to solve any kind of problem.
- 
-## What is Flowchart ?
-A pictorial or graphical represantaion of algorithm.
+---
 
-## Write an algorithm of addition of two number ?
-STEP 1 - start.
-STEP 2 - Enter two numbers (a ,b).
-STEP 3 - Add both numbers and store result.(i.e - result = a + b).
-STEP 4 - print the result.
-STEP 5 - Stop.
-This is first algorithm.
+## What is Programming?
+- A set of instructions to solve a particular problem.
 
-## SYMBOLS OF FLOWCHART :-
-|SHAPE         |WORK                  |
-|--------------|----------------------|
-|Ovel          |   start/stop         |
-|Parallelogram |      input/output    |
-|Rectangle     |   process            |
-|Diamond       |   decision making    |
-|Arows         |   flow of direction. |
+### What is an instruction?
+1. Any type of instruction provided to a computer to solve that problem.
+2. Inputs that we provide to the computer.
 
-## Write a Flowchart of sum of the numbes ?
-  [Start](ovel)
-     |
-     v
-  [Input A]---------
-     |             |
-     v             |-(parallelogram).
-  [Input B]---------
-     |
-     v
-  [SUM = A + B](rectangle)
-     |
-     v
-  [Display SUM](paralleelogram)
-     |
-     v
-  [End](ovel)
+---
 
-*NOTE - if flowchhart not come in one page so we want to go another page then what we do ? - use anotation !* 
+## Why Programming is Required?
+- We need programming to solve specific problems.
 
-## Write a algorithm to print 1 to 10
-STEP 1 - Start.
-STEP 2 - initialize st = 1 and end = 10.
-STEP 3 - print st.
-STEP 4 - increament st by 1.
-STEP 5 - check if st <= end ,repeat step 3 and 4.     
-STEP 6 - Stop.
+### What is a problem?
+1. A task we need to solve.
+2. A situation that needs a solution.
 
-## Draw a flowchart to print 1 to 10.
-[start](ovel)
+---
+
+## Technique to Solve a Problem
+1. Understand the problem – What is the problem?
+2. What should be the output/result?
+   - *(In programming, we must first understand the solution, then solve it using programming.)*
+3. What are the basic requirements for the result?
+4. Arrange the requirements in sequence to solve the problem.
+
+**Example – Add two numbers**  
+- Basic requirement: Two numbers.  
+- Arrangement: If numbers are (a, b), then: `c = a + b`.  
+- Result is obtained after calculating this.
+
+---
+
+## As per Book – Problem Solving Techniques
+1. Problem definition phase (understand the problem)
+2. Getting started with the problem (take immediate action)
+3. Use of specific examples (from past experience)
+4. Find similarities with other problems
+
+These are the steps for solving a problem. In programming, we use:
+
+- **Algorithm**
+- **Flowchart**
+
+---
+
+## Basics of Algorithm & Flowchart (Important for Exam: 10–15 marks)
+
+### What is an Algorithm?
+- A step-by-step procedure to solve any kind of problem.
+
+### What is a Flowchart?
+- A pictorial/graphical representation of an algorithm.
+
+---
+
+## Algorithm: Addition of Two Numbers
+
+1. Start  
+2. Enter two numbers (a, b)  
+3. Add both numbers → `result = a + b`  
+4. Print the result  
+5. Stop
+
+---
+
+## Flowchart Symbols:
+
+| Shape         | Purpose               |
+|---------------|-----------------------|
+| Oval          | Start/Stop            |
+| Parallelogram | Input/Output          |
+| Rectangle     | Process               |
+| Diamond       | Decision Making       |
+| Arrow         | Flow of Direction     |
+
+---
+
+## Flowchart: Sum of Two Numbers
+
+```
+[Start] (oval)
    |
    v
-[st = 1, end = 10](rectangle)
+[Input A] (parallelogram)
    |
    v
-[print st](parallelogram)<-----------
-   |                                |
-   v                                |
-[st += 1](rectangle)                |
-    |                               |
-    v                               |
- [st <= end](diamond)----------------
-    |
-    v
-  [stop](oval)
+[Input B] (parallelogram)
+   |
+   v
+[SUM = A + B] (rectangle)
+   |
+   v
+[Display SUM] (parallelogram)
+   |
+   v
+[End] (oval)
+```
 
-## Feature of alogrithm :-
-1. input.
-2. output.
-3. definiteness. 
-4. finiteness.
-5. effectiveness.
-6. correcteness.
+*Note: If the flowchart goes to the next page, use annotation symbols.*
 
-## Write an algorithm to calculate the factorial of a given number.(HOMEWORK)
-  what is factorial ?
-  it is denoted by n! means n! = n(n -1)(n - 2)(n - 3)........ 
-i.e. - how factorial works - 
-number       f = f * number(f = 1)        NewNumber(number - 1)      NewNumber > 0
-5              1 * 5 = 5                   5 - 1 = 4                  is 4 > 0 :- No
-4              5 * 4 = 20                  4 - 1 = 3                  is 3 > 0 :- No
-3              20 * 3 = 60                 3 - 1 = 2                  is 2 > 0 :- No
-2              60 * 2 = 120                2 - 1 = 1                  is 1 > 0 :- No
-1              120 * 1 = 120               1 - 1 = 0                  is 0 > 0 :- No loops terminated 
+---
 
-## write an algorithm to check that whether the given number is prime or not.(HOMEWORK)
-logic :-
-let suppose we have a number 5 
-n = 5
-calculation (function) = n / (n-1 from 5 to 2).
-  if we took n and devide 2 to 5
-  if we took n annd devide 2 to n/2
+## Algorithm: Print 1 to 10
 
-*There is multiple way to solve a problem*
-but initially there is two approaches to solve the problem
-1. Top - Down
-2. Bottom - Down
+1. Start  
+2. Initialize `st = 1`, `end = 10`  
+3. Print `st`  
+4. Increment `st` by 1  
+5. If `st <= end`, repeat steps 3–4  
+6. Stop
 
-**TOP - DOWN DESIGN**
-     COMPLEX PROBLEM
-    /       |       \
- [s -1]  [s - 2]  [s - 3]
-/      \  /    \  /      \ .....
-The set of solution of subproblem is called complex solution.
+---
 
-**BOTTOM - DOWN**
-It comes under dyanamics problem and greedy technique.(out of syllabus)
+## Flowchart: Print 1 to 10
 
-**Question - reasoning**
-What is programming language ?
-Those language through which we write programme is called as programming langauge.
-nowdays varios kind of programming languages exits
-Basically programming language can be divided intoo two parts that is low  - level language and high  - level language.
+```
+[Start]
+   |
+   v
+[st = 1, end = 10]
+   |
+   v
+[Print st] <-------
+   |              |
+   v              |
+[st = st + 1]     |
+   |              |
+   v              |
+[st <= end] ------|
+   |
+   v
+[Stop]
+```
 
-High - level lenaguge ;- Those language whos needs translator to translate the program to make computer understandable.
-Low - level language :-Those language which is direclty excutable by machine.  
+---
 
-Two things also works between the user - computer communication
-1. Linker :- it is a specific program which is used to link particular data to the specific library.
-2. Loader :- it is also a specific program which is use to specified dyanamical memory allocation to each and every instruction(programe).
+## Features of Algorithm
+1. Input  
+2. Output  
+3. Definiteness  
+4. Finiteness  
+5. Effectiveness  
+6. Correctness  
 
-## HISTORY OF C PROGRAMMING :-
-1. it is developed by Dennis Ritchie in 1972 USA at AT&T lab.
-2. it is known by B but after a lots implementation on B it named C.
-3. it is neither low or high level language therefore it is mid - level languge because it is work between operating system and spreadsheet, transaction.
+---
 
-## What is an ERROR :-
-1. which is not being accpetable is error.
-2. those which is violenting the rule is error.
-3. those which in not follwo grammer is called error.
+## Homework:
 
-*HOME WORK*
-read linker error and loader error.
-Line 125; L
-Line 111;
+### 1. Algorithm: Factorial of a Number  
+**What is factorial?**  
+- Denoted as `n!`  
+- Formula: `n! = n × (n-1) × (n-2) × ... × 1`  
 
-~~UNIT - 1 closed~~
- 
-~~key notes :-~~
-how can we do programming ? - CLEARED ✅
-what is basic fondamentals of programming ? -  CLEARED ✅
-why we need programming ? - CLEARED ✅
+Example:  
+```
+n = 5  
+f = 1  
+f = f * 5 = 5  
+f = 5 * 4 = 20  
+f = 20 * 3 = 60  
+f = 60 * 2 = 120  
+f = 120 * 1 = 120  
+```
 
+### 2. Algorithm: Check if Number is Prime  
+**Logic:**  
+- Let `n = 5`  
+- Check divisibility from 2 to `n/2`  
+- If divisible, it’s not prime. Else, it is.
+
+---
+
+## Problem-Solving Approaches:
+
+### 1. Top-Down Design  
+- Break the complex problem into sub-problems:  
+```
+  COMPLEX PROBLEM
+   /     |     \
+ [S1]  [S2]   [S3]
+ / \    / \    / \
+```
+- Combine solutions of sub-problems for the final answer.
+
+### 2. Bottom-Up Design *(Dynamic Programming/Greedy – Out of Syllabus)*
+
+---
+
+## Question: What is a Programming Language?
+- Languages used to write programs.
+
+**Types:**
+- **High-Level Language:** Requires translator (compiler/interpreter)
+- **Low-Level Language:** Directly executed by machine
+
+---
+
+## Between User and Computer Communication:
+
+1. **Linker** – Links code to the required libraries  
+2. **Loader** – Allocates memory dynamically for program execution
+
+---
+
+## History of C Programming
+
+1. Developed by **Dennis Ritchie** in **1972** at **AT&T Labs (USA)**  
+2. Evolved from language **B**  
+3. Considered a **mid-level language**  
+   - Works between **OS** and **application layers**
+
+---
+
+## What is an Error?
+
+1. Anything that is **not acceptable** in a program  
+2. Violates programming rules or grammar  
+3. Prevents the program from compiling/executing
+
+---
+
+## Homework:
+
+- Read about **Linker Error** and **Loader Error**
+
+---
+
+### ✅ UNIT - 1 COMPLETED
+
+**Key Notes Recap:**
+- How can we do programming? – ✅ CLEARED  
+- What are the fundamentals of programming? – ✅ CLEARED  
+- Why do we need programming? – ✅ CLEARED  
+```
+
+Let me know if you'd like this as a PDF or downloadable file too!
