@@ -1,14 +1,14 @@
 ### MCS201(Programming in C and Python)
 
-#what is programming ?
+# what is programming ?
 Set of instruction to solve a particular problem.
     what is an instruction ?
     1. any type of instruction that provide to computer to solve that probelem.
     2. those input what we provides to computer.
     
-##Why programming is required ?
+## Why programming is required ?
 We required the programming to solve specific problem.
-                                              ###What is the problem ?
+                                              ### What is the problem ?
                                               1. A task we need to solve  
                                               2. Probelm is situation 
                                                  TECHNIQUE TO SOLVE A PROBLEM
@@ -22,7 +22,7 @@ We required the programming to solve specific problem.
                                                            Arrangment - is number are (a, b) then arrangement is - c = (a + b)
                                                            Result after calculationg arrangement.
                                                            This is what - how we do programming.
-##About chapter from book, chapter says
+## About chapter from book, chapter says
 Problem solving technique
 1. problem definotion phase(understanding the problem)
 2. getting started with problem(immediatly take action toward problem)
@@ -31,15 +31,15 @@ Problem solving technique
 these are the steps for solving a probelm.
 In problem solving problem we have ALGORITHM and FLOWCHART
  
-##BASIC OF ALGORITHM  - FLOWCHART (exam 10 - 15 marks)
-###What is the ALGORITHM ?
+## BASIC OF ALGORITHM  - FLOWCHART (exam 10 - 15 marks)
+### What is the ALGORITHM ?
 The step by step procedure to solve any kind of problem
 Algorithm is the proceed to solve any kind of problem
  
-##What is Flowchart ?
+## What is Flowchart ?
 A pictorial or graphical represantaion of algorithm.
 
-##Write an algorithm of addition of two number ?
+## Write an algorithm of addition of two number ?
 STEP 1 - start.
 STEP 2 - Enter two numbers (a ,b).
 STEP 3 - Add both numbers and store result.(i.e - result = a + b).
@@ -47,7 +47,7 @@ STEP 4 - print the result.
 STEP 5 - Stop.
 This is first algorithm
 
-##SYMBOLS OF FLOWCHART :-
+## SYMBOLS OF FLOWCHART :-
 SHAPE            WORK      
 Ovel             start/stop
 Parallelogram      input/output
@@ -55,7 +55,7 @@ Rectangle        process
 Diamond          decision making
 Arows            flow of direction.
 
-##Write a Flowchart of sum of the numbes ?
+## Write a Flowchart of sum of the numbes ?
   [Start](ovel)
      |
      v
@@ -75,7 +75,7 @@ Arows            flow of direction.
 
 NOTE - if flowchhart not come in one page so we want to go another page then what we do ? - use anotation ! 
 
-##Write a algorithm to print 1 to 10
+## Write a algorithm to print 1 to 10
 STEP 1 - Start
 STEP 2 - initialize st = 1 and end = 10
 STEP 3 - print st
@@ -83,7 +83,7 @@ STEP 4 - increament st by 1
 STEP 5 - check if st <= end ,repeat step 3 and 4       
 STEP 6 - Stop.
 
-##Draw a flowchart to print 1 to 10.
+## Draw a flowchart to print 1 to 10.
 [start](ovel)
    |
    v
@@ -101,7 +101,7 @@ STEP 6 - Stop.
     v
   [stop](oval)
 
-##Feature of alogrithm :-
+## Feature of alogrithm :-
 1. input
 2. output 
 3. definiteness 
@@ -109,7 +109,7 @@ STEP 6 - Stop.
 5. effectiveness
 6. correcteness
 
-##Write an algorithm to calculate the factorial of a given number.(HOMEWORK)
+## Write an algorithm to calculate the factorial of a given number.(HOMEWORK)
                                     what is factorial ?
                                    it is denoted by n! means n! = n(n -1)(n - 2)(n - 3)........ 
 i.g - how factorial works - 
@@ -123,7 +123,7 @@ number       f = f * number(f = 1)        NewNumber(number - 1)      NewNumber >
 
 
 
-##write an algorithm to check that whether the given number is prime or not.(HOMEWORK)
+## write an algorithm to check that whether the given number is prime or not.(HOMEWORK)
 logic ;-
 let suppose we have a number 5 
 n = 5
@@ -131,19 +131,19 @@ calculation (function) = n / (n-1 from 5 to 2).
   if we took n and devide 2 to 5
   if we took n annd devide 2 to n/2
 
-**There is multiple way to solve a problem 
+*There is multiple way to solve a problem*
 but initially there is two approaches to solve the problem
 1. Top - Down
 2. Bottom - Down
 
-#TOP - DOWN DESIGN
+**TOP - DOWN DESIGN**
      COMPLEX PROBLEM
     /       |       \
  [s -1]  [s - 2]  [s - 3]
 /      \  /    \  /      \ .....
 The set of solution of subproblem is called complex solution.
 
-##BOTTOM - DOWN
+**BOTTOM - DOWN**
 It comes under dyanamics problem and greedy technique.(out of syllabus)
 
 **Question - reasoning**
@@ -159,17 +159,17 @@ Two things also works between the user - computer communication
 1. Linker :- it is a specific program which is used to link particular data to the specific library.
 2. Loader :- it is also a specific program which is use to specified dyanamical memory allocation to each and every instruction(programe).
 
-##HISTORY OF C PROGRAMMING :-
+## HISTORY OF C PROGRAMMING :-
 1. it is developed by Dennis Ritchie in 1972 USA at AT&T lab.
 2. it is known by B but after a lots implementation on B it named C.
 3. it is neither low or high level language therefore it is mid - level languge because it is work between operating system and spreadsheet, transaction.
 
-##What is an ERROR :-
+## What is an ERROR :-
 1. which is not being accpetable is error.
 2. those which is violenting the rule is error.
 3. those which in not follwo grammer is called error.
 
-~~HOME WORK~~
+*HOME WORK*
 read linker error and loader error.
 Line 125; L
 Line 111;
