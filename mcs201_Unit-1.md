@@ -11,7 +11,7 @@ We required the programming to solve specific problem.
                                               ### What is the problem ?
                                               1. A task we need to solve  
                                               2. Probelm is situation 
-                                                 TECHNIQUE TO SOLVE A PROBLEM
+                                                 ### TECHNIQUE TO SOLVE A PROBLEM
                                                  1. understand the problem - what the probelem is ?
                                                  2. what should be the output/result ?
                                                     (In programming first we need solution to take that as problem and solve in the form of programming.)
@@ -45,24 +45,25 @@ STEP 2 - Enter two numbers (a ,b).
 STEP 3 - Add both numbers and store result.(i.e - result = a + b).
 STEP 4 - print the result.
 STEP 5 - Stop.
-This is first algorithm
+This is first algorithm.
 
 ## SYMBOLS OF FLOWCHART :-
-SHAPE            WORK      
-Ovel             start/stop
-Parallelogram      input/output
-Rectangle        process
-Diamond          decision making
-Arows            flow of direction.
+|SHAPE         |WORK                  |
+|--------------|----------------------|
+|Ovel          |   start/stop         |
+|Parallelogram |      input/output    |
+|Rectangle     |   process            |
+|Diamond       |   decision making    |
+|Arows         |   flow of direction. |
 
 ## Write a Flowchart of sum of the numbes ?
   [Start](ovel)
      |
      v
-  [Input A]________
+  [Input A]---------
      |             |
-     v             |-(parallelogram)
-  [Input B]________|
+     v             |-(parallelogram).
+  [Input B]---------
      |
      v
   [SUM = A + B](rectangle)
@@ -73,7 +74,7 @@ Arows            flow of direction.
      v
   [End](ovel)
 
-NOTE - if flowchhart not come in one page so we want to go another page then what we do ? - use anotation ! 
+*NOTE - if flowchhart not come in one page so we want to go another page then what we do ? - use anotation !* 
 
 ## Write a algorithm to print 1 to 10
 STEP 1 - Start
@@ -174,9 +175,9 @@ read linker error and loader error.
 Line 125; L
 Line 111;
 
-**UNIT - 1 closed;**
+~~UNIT - 1 closed~~
  
-key notes :- 
+~~key notes :-~~
 how can we do programming ? - CLEARED ✅
 what is basic fondamentals of programming ? -  CLEARED ✅
 why we need programming ? - CLEARED ✅
