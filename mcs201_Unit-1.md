@@ -8,33 +8,34 @@ Set of instruction to solve a particular problem.
     
 ## Why programming is required ?
 We required the programming to solve specific problem.
-                                              ## What is the problem ?
-                                              1. A task we need to solve  
-                                              2. Probelm is situation 
-                                                 ## TECHNIQUE TO SOLVE A PROBLEM
-                                                 1. understand the problem - what the probelem is ?
-                                                 2. what should be the output/result ?
-                                                    (In programming first we need solution to take that as problem and solve in the form of programming.)
-                                                  3. what are the basic requirment for the specific result ?
-                                                  4. Arrangment of the requirement in sequesnce in order to solve problme.
-                                                    for example - Add two numbers. 
-                                                           Basic requirement - need two numbers
-                                                           Arrangment - is number are (a, b) then arrangement is - c = (a + b)
-                                                           Result after calculationg arrangement.
-                                                           This is what - how we do programming.
+### What is the problem ?**
+1. A task we need to solve. 
+2. Probelm is situation.
+    TECHNIQUE TO SOLVE A PROBLEM.
+1. understand the problem - what the probelem is ?
+2. what should be the output/result ?
+*(In programming first we need solution to take that as problem and solve in the form of programming.)*
+3. what are the basic requirment for the specific result ?
+4. Arrangment of the requirement in sequesnce in order to solve problme.
+for example - Add two numbers. 
+   Basic requirement - need two numbers.
+   Arrangment - is number are (a, b) then arrangement is - c = (a + b).
+   Result after calculationg arrangement.
+   This is what - how we do programming.
+          
 ## About chapter from book, chapter says
-Problem solving technique
-1. problem definotion phase(understanding the problem)
-2. getting started with problem(immediatly take action toward problem)
-3. The use of specific example (we can take example of previusly done problem)
+Problem solving technique.
+1. problem definotion phase(understanding the problem).
+2. getting started with problem(immediatly take action toward problem).
+3. The use of specific example (we can take example of previusly done problem).
 4. similiarities in the problem (what are the similarities are there ?)
 these are the steps for solving a probelm.
-In problem solving problem we have ALGORITHM and FLOWCHART
+In problem solving problem we have ALGORITHM and FLOWCHART.
  
 ## BASIC OF ALGORITHM  - FLOWCHART (exam 10 - 15 marks)
 ### What is the ALGORITHM ?
-The step by step procedure to solve any kind of problem
-Algorithm is the proceed to solve any kind of problem
+The step by step procedure to solve any kind of problem.
+Algorithm is the proceed to solve any kind of problem.
  
 ## What is Flowchart ?
 A pictorial or graphical represantaion of algorithm.
@@ -77,11 +78,11 @@ This is first algorithm.
 *NOTE - if flowchhart not come in one page so we want to go another page then what we do ? - use anotation !* 
 
 ## Write a algorithm to print 1 to 10
-STEP 1 - Start
-STEP 2 - initialize st = 1 and end = 10
-STEP 3 - print st
-STEP 4 - increament st by 1
-STEP 5 - check if st <= end ,repeat step 3 and 4       
+STEP 1 - Start.
+STEP 2 - initialize st = 1 and end = 10.
+STEP 3 - print st.
+STEP 4 - increament st by 1.
+STEP 5 - check if st <= end ,repeat step 3 and 4.     
 STEP 6 - Stop.
 
 ## Draw a flowchart to print 1 to 10.
@@ -103,17 +104,17 @@ STEP 6 - Stop.
   [stop](oval)
 
 ## Feature of alogrithm :-
-1. input
-2. output 
-3. definiteness 
-4. finiteness 
-5. effectiveness
-6. correcteness
+1. input.
+2. output.
+3. definiteness. 
+4. finiteness.
+5. effectiveness.
+6. correcteness.
 
 ## Write an algorithm to calculate the factorial of a given number.(HOMEWORK)
-                                    what is factorial ?
-                                   it is denoted by n! means n! = n(n -1)(n - 2)(n - 3)........ 
-i.g - how factorial works - 
+  what is factorial ?
+  it is denoted by n! means n! = n(n -1)(n - 2)(n - 3)........ 
+i.e. - how factorial works - 
 number       f = f * number(f = 1)        NewNumber(number - 1)      NewNumber > 0
 5              1 * 5 = 5                   5 - 1 = 4                  is 4 > 0 :- No
 4              5 * 4 = 20                  4 - 1 = 3                  is 3 > 0 :- No
@@ -121,11 +122,8 @@ number       f = f * number(f = 1)        NewNumber(number - 1)      NewNumber >
 2              60 * 2 = 120                2 - 1 = 1                  is 1 > 0 :- No
 1              120 * 1 = 120               1 - 1 = 0                  is 0 > 0 :- No loops terminated 
 
-
-
-
 ## write an algorithm to check that whether the given number is prime or not.(HOMEWORK)
-logic ;-
+logic :-
 let suppose we have a number 5 
 n = 5
 calculation (function) = n / (n-1 from 5 to 2).
