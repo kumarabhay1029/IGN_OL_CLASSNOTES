@@ -8,10 +8,10 @@ Set of instruction to solve a particular problem.
     
 ## Why programming is required ?
 We required the programming to solve specific problem.
-                                              ### What is the problem ?
+                                              ## What is the problem ?
                                               1. A task we need to solve  
                                               2. Probelm is situation 
-                                                 ### TECHNIQUE TO SOLVE A PROBLEM
+                                                 ## TECHNIQUE TO SOLVE A PROBLEM
                                                  1. understand the problem - what the probelem is ?
                                                  2. what should be the output/result ?
                                                     (In programming first we need solution to take that as problem and solve in the form of programming.)
