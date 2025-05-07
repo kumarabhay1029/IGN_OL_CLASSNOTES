@@ -57,7 +57,8 @@ Without specifying the base, it becomes unclear which number system the number b
 **Example**:  
 `(2A5)₁₆`  
 → `A = 10`  
-→ `5 * A = 5 * 10 = 50`
+→ `5 * A = 5 * 10 = 50` 
+this is wrong way to do.
 
 ---
 
