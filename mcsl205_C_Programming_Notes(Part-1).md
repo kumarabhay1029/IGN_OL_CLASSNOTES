@@ -1,15 +1,44 @@
-# MCSL-205 Section - 1 (C Programming)
+# MCSL-205 Section - 1 (C Programming)  
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Basic Program Structure](#basic-program-structure)
+3. [Important Components](#important-components)
+    - [Header Files](#1-header-files)
+    - [Keywords and Functions](#2-keywords-and-functions)
+4. [Example: Simple Output Program](#example-simple-output-program)
+    - [Multiple Print Statements](#multiple-print-statements)
+5. [Using `return 0` Instead of `getch()`](#using-return-0-instead-of-getch)
+6. [Data Types and Format Specifiers](#data-types-and-format-specifiers)
+7. [Program: Add Two Numbers](#program-add-two-numbers)
+8. [Program: Add Two Numbers with User Input](#program-add-two-numbers-with-user-input)
+9. [Program: Area and Circumference of a Circle](#program-area-and-circumference-of-a-circle)
+10. [Note on Compilers](#note-on-compilers)
+11. [HOMEWORK](#homework)
+12. [Conditional Statements](#conditional-statements)
+    - [If-Else: Greater of Two Numbers](#1-if-else-greater-of-two-numbers)
+    - [Else-If: Greater of Three Numbers](#2-else-if-greater-of-three-numbers)
+    - [Leap Year Checker](#3-leap-year-checker)
+    - [BTECH Eligibility Check](#4-btech-eligibility-check)
+    - [Compare Age of Two Students](#5-compare-age-of-two-students)
+13. [LAB CONTINUES...](#lab-continues)
+14. [HOMEWORK](#homework-1)
+
+---
 
 ## Introduction
 
-1. We use either **TURBO C/C++** or **BORLAND C/C++**, but as per the syllabus, **BORLAND C/C++** is preferred.
-2. Before learning programming, we must understand **what programming is** and **why it is required**.
-3. Every programming language has its **grammar**, meaning rules and regulations that must be followed.
-4. Every program has **syntax** that must be followed.
+1. **Preferred Compiler:** Use **BORLAND C/C++** as per syllabus; **TURBO C/C++** is also acceptable.
+2. **What is Programming?** Understand what programming is and why it is necessary.
+3. **Programming Grammar:** Every language has its own grammar (rules and syntax).
+4. **Syntax:** Each program must follow the proper syntax.
+
+---
 
 ## Basic Program Structure
 
-To write a program in C, we use the following syntax:
+Typical C program structure:
 
 ```c
 #include <header_file>
@@ -18,32 +47,37 @@ void main() {
 }
 ```
 
-- `main()` is the main function.
-- A **function** is a set of instructions that executes to produce a result.
-- In math, `f(x)` is a function of x.
+- `main()` is the starting point of program execution.
+- A **function** is a set of instructions that produces a result.
+- In mathematics, `f(x)` denotes a function with argument x.
+
+---
 
 ## Important Components
 
 ### 1. Header Files
-Header files are libraries required to compile and run programs.
 
-- **Common header files**:
-  - `#include <stdio.h>` – Standard Input/Output (used in every program)
+Header files provide access to library functions required to compile and run programs.
+
+- **Common Header Files:**
+  - `#include <stdio.h>` – Standard Input/Output (required in almost every program)
   - `#include <conio.h>` – Console Input/Output
   - `#include <stdlib.h>` – General utilities
-  - `#include <math.h>` – Math functions
+  - `#include <math.h>` – Mathematical operations
   - `#include <string.h>` – String operations
 
-These help link the right compiler and translator.
+These files help the compiler link to the appropriate libraries.
 
 ### 2. Keywords and Functions
 
-Important functions:
+Frequently used functions:
 
-- `printf();` – Output text
-- `scanf();` – Input values
-- `getch();` – Waits for user input
-- `clrscr();` – Clears screen
+- `printf();` – Print output to the screen
+- `scanf();` – Read input from the user
+- `getch();` – Wait for a key press
+- `clrscr();` – Clear the screen
+
+---
 
 ## Example: Simple Output Program
 
@@ -72,8 +106,9 @@ void main() {
     getch();
 }
 ```
+- `\n` is used to move the output to a new line.
 
-- `\n` is used to print on a new line.
+---
 
 ## Using `return 0` Instead of `getch()`
 
@@ -86,17 +121,20 @@ int main() {
     return 0;
 }
 ```
+- When using `int main()`, always return an integer (`return 0;`).
+- `getch()` is used to hold the output window open in BORLAND/TURBO C.
 
-- If using `int main()`, you must return an integer (`return 0;`).
-- `getch()` is used to hold the output window in BORLAND/TURBO C.
+---
 
 ## Data Types and Format Specifiers
 
-| Data Type | Keyword | Format Specifier | Size          |
-|-----------|---------|------------------|---------------|
-| Integer   | int     | `%d`              | 2 bytes       |
-| Character | char    | `%c`              | 1 byte        |
-| Float     | float   | `%f`              | 4 bytes       |
+| Data Type | Keyword | Format Specifier | Size    |
+|-----------|---------|------------------|---------|
+| Integer   | int     | `%d`             | 2 bytes |
+| Character | char    | `%c`             | 1 byte  |
+| Float     | float   | `%f`             | 4 bytes |
+
+---
 
 ## Program: Add Two Numbers
 
@@ -113,6 +151,8 @@ void main() {
 }
 ```
 
+---
+
 ## Program: Add Two Numbers with User Input
 
 ```c
@@ -123,16 +163,18 @@ void main() {
     int a, b, c;
     printf("Enter first number: ");
     scanf("%d", &a);
-    
+
     printf("Enter second number: ");
     scanf("%d", &b);
-    
+
     c = a + b;
     printf("Sum = %d\n", c);
     printf("Sum of %d and %d = %d", a, b, c);
     getch();
 }
 ```
+
+---
 
 ## Program: Area and Circumference of a Circle
 
@@ -157,13 +199,16 @@ void main() {
 }
 ```
 
+---
+
 ## Note on Compilers
 
-Different compilers (e.g., G++, Code::Blocks) may behave differently. For best results in C/C++, use **Turbo C++** or **Borland C++**, especially for learning and basic programs.
+- Different compilers (G++, Code::Blocks, etc.) may have different behaviors.
+- For learning and basic C/C++ programs, **Turbo C++** or **Borland C++** is recommended.
 
 ---
 
-## **HOMEWORK**
+## HOMEWORK
 
 1. Write a program to find the **area and perimeter of a rectangle**.
 2. Write a program to **calculate the sum and average of three numbers**.
@@ -185,6 +230,8 @@ void main() {
 }
 ```
 
+---
+
 ### 2. Else-If: Greater of Three Numbers
 
 ```c
@@ -203,6 +250,8 @@ void main() {
 }
 ```
 
+---
+
 ### 3. Leap Year Checker
 
 ```c
@@ -218,6 +267,8 @@ void main() {
     }
 }
 ```
+
+---
 
 ### 4. BTECH Eligibility Check
 
@@ -240,6 +291,8 @@ void main() {
     getch();
 }
 ```
+
+---
 
 ### 5. Compare Age of Two Students
 
@@ -267,8 +320,11 @@ void main() {
 
 ## LAB CONTINUES...
 
-## **HOMEWORK**
+---
 
-- Learn and practice normal `if-else` programs.
-- Develop an algorithm for each program covered above.
-```
+## HOMEWORK
+
+- Practice writing normal `if-else` programs.
+- For each program above, write an algorithm before coding.
+
+---
