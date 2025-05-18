@@ -98,6 +98,7 @@ Hamming code is a method for **detecting and correcting single-bit errors** in b
   - Check which parity bits (circles) are violated to find the error location.
 
 **Visualization:**
+
 ![Hamming error bit checking](https://drive.google.com/uc?export=view&id=1G_TcSpjDK015QYrdLQCSxz6FMC1rtEWU)
 
 - The intersection (highlighted area) shows the error bit.
