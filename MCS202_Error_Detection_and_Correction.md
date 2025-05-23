@@ -58,7 +58,7 @@ Both work as guard bits for data.
 
 - **Examples:**
 
-    | Data    | # of 1s | Parity Bit | Parity Data    |
+    | Data    | # of 1s | Parity Bit | Parity Data   |
     |---------|---------|------------|---------------|
     | 101011  |   4     |     0      | 0 101011      |
     | 111011  |   5     |     1      | 1 111011      |
@@ -129,7 +129,7 @@ If data length = N, find smallest `i` such that:
 
 
 #### Step 2: Arrangement
-
+- For source data
 - Total length = N + i (data + parity bits)
 - Parity bits are placed at positions that are powers of 2 (1, 2, 4, 8, ...)
 
@@ -174,21 +174,142 @@ If data length = N, find smallest `i` such that:
 
 ![Hamming correction](https://drive.google.com/uc?export=view&id=1VeP_WsEmZbgP61ATrf0zpRTSDrYKEKfy)
 
+##### Step 4: Received Data Analysis
+- For Received data.
+- The received data is analyzed to detect and correct errors using Hamming code. Below is the received data and how parity bits are calculated.
+
 ---
 
-#### Step 4: Error Detection (Syndrome Calculation)
+ **Received Data Layout**
 
-- Compare parity bits of received data with calculated parity bits to get a **syndrome word**.
-- The syndrome (in binary) gives the error position.
-- Flip the bit at that position to correct the error.
+| Position | 12 | 11 | 10 | 9  | 8   | 7  | 6  | 5  | 4   | 3  | 2  | 1  |
+|----------|----|----|----|----|-----|----|----|----|-----|----|----|----|
+| Bit      | 1  | 0  | 0  | 0  | pt4 | 1  | 0  | 0  | pt3 | 1  | pt2 | pt1|
 
-**Example:**
+---
+
+**Bitmap Table**
+
+| Position | 8   | 4   | 2   | 1   |
+|----------|-----|-----|-----|-----|
+| 1        | -   | -   | -   | 1   |
+| 2        | -   | -   | 1   | -   |
+| 3        | -   | -   | 1   | 1   |
+| 4        | -   | 1   | -   | -   |
+| 5        | -   | 1   | -   | 1   |
+| 6        | -   | 1   | 1   | -   |
+| 7        | -   | 1   | 1   | 1   |
+| 8        | 1   | -   | -   | -   |
+| 9        | 1   | -   | -   | 1   |
+| 10       | 1   | -   | 1   | -   |
+| 11       | 1   | -   | 1   | 1   |
+| 12       | 1   | 1   | -   | -   |
+
+---
+
+#### Step 5: **Parity Bit Calculations**
+
+The values of parity bits (pt1, pt2, pt3, pt4) are calculated using **even parity (EP)** for specific bit positions:
+
+1. **pt1**: Covers positions 1, 3, 5, 7, 9, 11  
+   ```
+   pt1 = EP(3rd, 5th, 7th, 9th, 11th)
+       = EP(1, 0, 1, 0, 0)
+       = 0
+   ```
+
+2. **pt2**: Covers positions 2, 3, 6, 7, 10, 11  
+   ```
+   pt2 = EP(3rd, 6th, 7th, 10th, 11th)
+       = EP(1, 0, 1, 0, 0)
+       = 0
+   ```
+
+3. **pt3**: Covers positions 4, 5, 6, 7, 12  
+   ```
+   pt3 = EP(5th, 6th, 7th, 12th)
+       = EP(0, 0, 1, 1)
+       = 0
+   ```
+
+4. **pt4**: Covers positions 8, 9, 10, 11, 12  
+   ```
+   pt4 = EP(9th, 10th, 11th, 12th)
+       = EP(0, 0, 0, 1)
+       = 1
+   ```
+
+---
+
+## **Final Receiver Data**
+
+The final received data with parity bits is:  
+**100011000100**
+
+#### **Source Data for Comparison**  
+The original source data is:  
+**101001000110**
+
+---
+
+## **Error Detection(Syndrome Calculation)**
+
+### **Step 1: Comparing Parity Bits**
+- **Parity Bits of Source Data:** `0010`  
+- **Parity Bits of Received Data:** `1000`  
+- **Syndrome Word:**  
+  ```
+  Syndrome = Source Parity XOR Received Parity
+           = 0010 XOR 1000
+           = 1010
+  ```
+
+### **Step 2: Error Detection**
+- The syndrome word `1010` (binary) corresponds to position **10** in decimal.  
+- This indicates an error at the **10th bit** of the received data.
+
+---
+
+## **Error Correction**
+
+### **Step 1: Flip the Error Bit**
+- Correct the error by flipping the bit at position 10 in the received data:
+  ```
+  Received Data: 100011000100
+  Corrected Data: 101001000110
+  ```
+
+### **Step 2: Extract Corrected Data**
+- The **corrected receiver data** (without parity bits) is:  
+  **10101001**
+
+
+  **Example:**
 
 - Source Data: `101001000110`
 - Received Data: `100011000100`
 - Syndrome: `1010` (binary) = 10 (decimal) ⟶ Error at position 10
 - Corrected Data: `101001000110` → Original Data: `10101001`
 
+---
+
+## **Diagram for Reference**
+
+![Interrupt Handling Diagram 5](https://drive.google.com/uc?export=view&id=1E9_wjqnW2taHQIUE2Yqv8cvGZlyKl517)
+
+---
+
+### **Summary of the Process**
+1. Arrange received data with parity bits.
+2. Calculate parity bits using even parity for specific positions.
+3. Compare source and received parity bits to form the syndrome word.
+4. Decode the syndrome to locate the error position.
+5. Correct the error by flipping the bit at the identified position.
+6. Extract the corrected data.
+
+The process ensures detection and correction of a **single-bit error** in the received data.](https://chat.whatsapp.com/LqaemPIHBhHHQLg8qPfeeD)
+
+---
 
 ![Syndrome illustration](https://drive.google.com/uc?export=view&id=1E9_wjqnW2taHQIUE2Yqv8cvGZlyKl517)
 
