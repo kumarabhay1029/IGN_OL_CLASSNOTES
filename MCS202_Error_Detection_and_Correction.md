@@ -74,7 +74,7 @@ Both work as guard bits for data.
 
 - **Examples:**
 
-    | Data    | # of 1s | Parity Bit | Parity Data    |
+    | Data    | # of 1s | Parity Bit | Parity Data   |
     |---------|---------|------------|---------------|
     | 101010  |   3     |     0      | 0 101010      |
     | 111010  |   4     |     1      | 1 111010      |
@@ -98,6 +98,7 @@ Hamming code is a method for **detecting and correcting single-bit errors** in b
   - Check which parity bits (circles) are violated to find the error location.
 
 **Visualization:**
+
 ![Hamming error bit checking](https://drive.google.com/uc?export=view&id=1G_TcSpjDK015QYrdLQCSxz6FMC1rtEWU)
 
 - The intersection (highlighted area) shows the error bit.
@@ -123,6 +124,9 @@ If data length = N, find smallest `i` such that:
 - Example: For N = 8,
     - Try i = 4: 2⁴ = 16 ≥ 8 + 4 + 1 = 13 ✔️  
     - So, 4 parity bits are needed.
+
+![Hamming for more than 4 bits](https://drive.google.com/uc?export=view&id=1FQzxkbvaWvLkmmGNcc6aH68MY1yYi0e0)
+
 
 #### Step 2: Arrangement
 
@@ -168,7 +172,7 @@ If data length = N, find smallest `i` such that:
 **Final Hamming Encoded Data Example:**  
 `101001000110`
 
-![Hamming for more than 4 bits](https://drive.google.com/uc?export=view&id=1FQzxkbvaWvLkmmGNcc6aH68MY1yYi0e0)
+![Hamming correction](https://drive.google.com/uc?export=view&id=1VeP_WsEmZbgP61ATrf0zpRTSDrYKEKfy)
 
 ---
 
@@ -185,7 +189,7 @@ If data length = N, find smallest `i` such that:
 - Syndrome: `1010` (binary) = 10 (decimal) ⟶ Error at position 10
 - Corrected Data: `101001000110` → Original Data: `10101001`
 
-![Hamming correction](https://drive.google.com/uc?export=view&id=1VeP_WsEmZbgP61ATrf0zpRTSDrYKEKfy)
+
 ![Syndrome illustration](https://drive.google.com/uc?export=view&id=1E9_wjqnW2taHQIUE2Yqv8cvGZlyKl517)
 
 ---
