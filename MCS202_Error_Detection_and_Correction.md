@@ -140,13 +140,23 @@ If data length = N, find smallest `i` such that:
 
 **Bitmap Table:**
 
-| **Parity Bits** | **Position 1** | **Position 2** | **Position 3** | **Position 4** | **Position 5** | **Position 6** | **Position 7** | **Position 8** | **Position 9** | **Position 10** | **Position 11** | **Position 12** |
-|------------------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|-----------------|-----------------|-----------------|
-| **8**           | -              | -              | -              | -              | -              | -              | -              | 1              | 1              | 1               | 1               | 1               |
-| **4**           | -              | -              | -              | 1              | 1              | 1              | 1              | -              | -              | -               | -               | 1               |
-| **2**           | -              | 1              | 1              | -              | -              | 1              | 1              | -              | -              | 1               | 1               | -               |
-| **1**           | 1              | -              | 1              | -              | 1              | -              | 1              | -              | 1              | -               | 1               | -               |
 
+| **Parity Bits** | **8** | **4** | **2** | **1** |
+|------------------|-------|-------|-------|-------|
+| **Position 1**   | -     | -     | -     | 1     |
+| **Position 2**   | -     | -     | 1     | -     |
+| **Position 3**   | -     | -     | 1     | 1     |
+| **Position 4**   | -     | 1     | -     | -     |
+| **Position 5**   | -     | 1     | -     | 1     |
+| **Position 6**   | -     | 1     | 1     | -     |
+| **Position 7**   | -     | 1     | 1     | 1     |
+| **Position 8**   | 1     | -     | -     | -     |
+| **Position 9**   | 1     | -     | -     | 1     |
+| **Position 10**  | 1     | -     | 1     | -     |
+| **Position 11**  | 1     | -     | 1     | 1     |
+| **Position 12**  | 1     | 1     | -     | -     |
+
+   
 #### Step 3: Calculate Parity Bits
 
 - For each parity bit, take even parity of all bits it covers.
