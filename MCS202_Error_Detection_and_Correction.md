@@ -250,6 +250,8 @@ The final received data with parity bits is:
 The original source data is:  
 **101001000110**
 
+![Receiver Data](https://drive.google.com/uc?export=view&id=1Xuv9vZ8U7zOgtDZqX7XxzW2ufgNO7J-U)
+
 ---
 
 ## **Error Detection(Syndrome Calculation)**
