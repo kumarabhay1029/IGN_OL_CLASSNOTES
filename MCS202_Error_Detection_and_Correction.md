@@ -140,7 +140,7 @@ If data length = N, find smallest `i` such that:
 
 **Bitmap Table:**
 
-| Position  | 8 | 4 | 2 | 1 | (Parity bits) |
+| Position  | 8 | 4 | 2 | 1 | (Parity bits)
 |-----------|---|---|---|---|
 | 1         | - | - | - | 1 |
 | 2         | - | - | 1 | - |
