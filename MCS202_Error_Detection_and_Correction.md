@@ -295,7 +295,7 @@ The original source data is:
 
 ## **Diagram for Reference**
 
-![Interrupt Handling Diagram 5](https://drive.google.com/uc?export=view&id=1E9_wjqnW2taHQIUE2Yqv8cvGZlyKl517)
+![Syndrom](https://drive.google.com/uc?export=view&id=1E9_wjqnW2taHQIUE2Yqv8cvGZlyKl517)
 
 ---
 
@@ -308,10 +308,6 @@ The original source data is:
 6. Extract the corrected data.
 
 The process ensures detection and correction of a **single-bit error** in the received data.](https://chat.whatsapp.com/LqaemPIHBhHHQLg8qPfeeD)
-
----
-
-![Syndrome illustration](https://drive.google.com/uc?export=view&id=1E9_wjqnW2taHQIUE2Yqv8cvGZlyKl517)
 
 ---
 
