@@ -45,7 +45,8 @@
 ### What is Instruction Cycle?
 It is a set of phases from the creation of instructions up to its termination throughout the execution.
 
-![opcode-operand](https://drive.google.com/file/d/1e3cowrbL94HFLVIBoo25zL7_OSUHwACG/view?usp=sharing)
+![Opcode and Operand](https://drive.google.com/uc?export=view&id=1e3cowrbL94HFLVIBoo25zL7_OSUHwACG)
+
 
 #### Representing via Sequences
 Cycle means sequential steps.  
@@ -71,7 +72,7 @@ It is a set of activity or phases that starts from creation of instruction, to t
 7. **Calculate the address to store the result operand**
 8. **Store the result**
 
-![Instruction cycle](https://drive.google.com/file/d/1BhITgyekM87CuI2QxKPW93kbQgungw5Y/view?usp=sharing)
+![Instruction Cycle](https://drive.google.com/uc?export=view&id=1BhITgyekM87CuI2QxKPW93kbQgungw5Y)
 
 ---
 
@@ -80,7 +81,7 @@ It is a set of activity or phases that starts from creation of instruction, to t
 *Representing Instruction cycle via Flowchart.*  
 Make a flowchart basis of instruction cycle which is given below or see image.
 
-![Flowchart of phases](https://drive.google.com/file/d/1M7SZYbEqEMVArqNevW4OOIElW9-CHvuL/view?usp=sharing)
+![Flowchart of Phases](https://drive.google.com/uc?export=view&id=1M7SZYbEqEMVArqNevW4OOIElW9-CHvuL)
 
 ---
 
@@ -125,7 +126,7 @@ If number of variable increases then total combination will be 2ⁿ, where 2 ind
 | 0 | ✔ |   |
 | 1 |   | ✔ |
 
-![truth table intro](https://drive.google.com/file/d/14JeQ6Kt1ev0RWk858cXfC0kkeu_Wx6ws/view?usp=sharing)
+![Truth Table Introduction](https://drive.google.com/uc?export=view&id=14JeQ6Kt1ev0RWk858cXfC0kkeu_Wx6ws)
 
 ---
 
@@ -142,7 +143,7 @@ If x and y then total number of combination = 2ⁿ = 2² = 4
 
 - 2² = 4; 4/2 = 2 for x's possibility, 2/2 = 1 for y's possibility.
 
-![TT for 2 variables](https://drive.google.com/file/d/1Zin_E-5UxNk1HHQwhIvlNbLNZ70cD_uu/view?usp=sharing)
+![Truth Table for 2 Variables](https://drive.google.com/uc?export=view&id=1Zin_E-5UxNk1HHQwhIvlNbLNZ70cD_uu)
 
 ---
 
@@ -161,7 +162,8 @@ If x and y then total number of combination = 2ⁿ = 2² = 4
 
 - 2³ = 8; 8/2 = 4 for x's possibility, 4/2 = 2 for y's possibility, 2/1 = 1 for z's possibility.
 
-![TT for 3-variables](https://drive.google.com/file/d/12-WgHEWLuc1bYZ8iD1xDoJ-KzsGqxXFQ/view?usp=sharing)
+![Truth Table for 3 Variables](https://drive.google.com/uc?export=view&id=12-WgHEWLuc1bYZ8iD1xDoJ-KzsGqxXFQ)
+
 
 ---
 
@@ -188,7 +190,7 @@ If x and y then total number of combination = 2ⁿ = 2² = 4
 
 - 2⁴ = 16; 16/2 = 8 for x's possibility, 8/2 = 4 for y's possibility, 4/2 = 2 for z's possibility, 2/2 = 1 for w's possibility.
 
-![TT for 3 variables](https://drive.google.com/file/d/1jhtk4ZJCMrQ5GvNXA4FAKM86UYlAOEY9/view?usp=sharing)
+![Truth Table for 4 Variables](https://drive.google.com/uc?export=view&id=1jhtk4ZJCMrQ5GvNXA4FAKM86UYlAOEY9)
 
 ---
 
@@ -214,7 +216,7 @@ If x and y then total number of combination = 2ⁿ = 2² = 4
 | 1 | 0 |  0  |
 | 1 | 1 |  1  |
 
-![Shortcut trick for AND](https://drive.google.com/file/d/1DC9OXulLFTJIc0XTrivCyvrelUCD2Dyz/view?usp=sharing)
+![Shortcut Trick for AND](https://drive.google.com/uc?export=view&id=1DC9OXulLFTJIc0XTrivCyvrelUCD2Dyz)
 
 ---
 
@@ -235,7 +237,7 @@ If x and y then total number of combination = 2ⁿ = 2² = 4
 | 1 | 0 |  1  |
 | 1 | 1 |  1  |
 
-![TRICK for OR](https://drive.google.com/file/d/16ovAOHz5AzkubMX5fR5fwlLsn-pd19a7/view?usp=sharing)
+![Trick for OR](https://drive.google.com/uc?export=view&id=16ovAOHz5AzkubMX5fR5fwlLsn-pd19a7)
 
 ---
 
@@ -254,7 +256,7 @@ If x and y then total number of combination = 2ⁿ = 2² = 4
 | 0 | 1 |
 | 1 | 0 |
 
-![NOT operation](https://drive.google.com/file/d/1FxKWVjQzCpomnQxZqLjQu8ipvlh8HHXK/view?usp=sharing)
+![NOT Operation](https://drive.google.com/uc?export=view&id=1FxKWVjQzCpomnQxZqLjQu8ipvlh8HHXK)
 
 ---
 
@@ -279,7 +281,7 @@ Non-basic operations are made of basic operations.
 | 1 | 0 |  0  |     1     |
 | 1 | 1 |  1  |     0     |
 
-![NAND operation](https://drive.google.com/file/d/1cegEEZatIuSw2JPnxu3Cjs31xoSs5yEk/view?usp=sharing)
+![NAND Operation](https://drive.google.com/uc?export=view&id=1cegEEZatIuSw2JPnxu3Cjs31xoSs5yEk)
 
 ---
 
@@ -297,7 +299,7 @@ Non-basic operations are made of basic operations.
 | 1 | 0 |  1  |     0     |
 | 1 | 1 |  1  |     0     |
 
-![Nor OPeration](https://drive.google.com/file/d/1J1J1eF1fsMznX8x02KxYReW46QLtgHbK/view?usp=sharing)
+![NOR Operation](https://drive.google.com/uc?export=view&id=1J1J1eF1fsMznX8x02KxYReW46QLtgHbK)
 
 ---
 
