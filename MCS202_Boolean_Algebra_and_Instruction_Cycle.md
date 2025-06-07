@@ -401,7 +401,7 @@ A ───|⊝>── A(bar)
 ```
 ![AND ,  Or gate](https://drive.google.com/uc?export=view&id=1h09DQzsoN1AIAJBniL1T598L62NqMaBG)
 
-![NOT gate](https://drive.google.com/file/d/12MH2cfgJadYJjumJjrtLr-ec1ZULMzbZ)
+![My Image](https://drive.google.com/uc?export=view&id=12MH2cfgJadYJjumJjrtLr-ec1ZULMzbZ)
 
 ---
 
