@@ -1,0 +1,63 @@
+name: Add note via repository_dispatch
+on:
+  repository_dispatch:
+    types: [add-note]
+
+permissions:
+  contents: write
+
+jobs:
+  add-note:
+    name: Create note file and push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read dispatch payload and create note
+        id: create_note
+        run: |
+          set -euo pipefail
+          # debug payload
+          echo "Event payload:"
+          cat "$GITHUB_EVENT_PATH"
+          # extract fields
+          COURSE=$(jq -r '.client_payload.course_code // "UNASSIGNED"' "$GITHUB_EVENT_PATH")
+          TOPIC=$(jq -r '.client_payload.topic // "General Topic"' "$GITHUB_EVENT_PATH")
+          AUTHOR=$(jq -r '.client_payload.author // "Unknown Author"' "$GITHUB_EVENT_PATH")
+          CONTENT=$(jq -r '.client_payload.content // ""' "$GITHUB_EVENT_PATH")
+
+          # sanitize values
+          SAFE_COURSE=$(echo "$COURSE" | tr '[:lower:]' '[:upper:]' | sed -E 's/[^A-Z0-9 _-]+/ /g' | sed -E 's/[[:space:]]+/ /g' | sed -E 's/^ //; s/ $//')
+          SAFE_TOPIC=$(echo "$TOPIC" | sed -E 's/[^[:alnum:][:space:]\-_]+/ /g' | sed -E 's/[[:space:]]+/ /g' | sed -E 's/^ //; s/ $//')
+
+          FILENAME="${SAFE_COURSE} covered topics ${SAFE_TOPIC}.md"
+          mkdir -p docs/notes
+          DATE_UTC=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+
+          cat > "docs/notes/${FILENAME}" <<EOF
+# ${SAFE_COURSE} covered topics ${SAFE_TOPIC}
+
+_Author: ${AUTHOR}_
+_Date: ${DATE_UTC}_
+
+${CONTENT}
+EOF
+
+          echo "created_file=docs/notes/${FILENAME}" >> "$GITHUB_OUTPUT"
+          echo "filename=${FILENAME}" >> "$GITHUB_OUTPUT"
+      - name: Commit and push new note
+        run: |
+          set -euo pipefail
+          FILE_PATH="${{ steps.create_note.outputs.created_file }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$FILE_PATH"
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Add note: ${{ steps.create_note.outputs.filename }}"
+            git push
+          fi
