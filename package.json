@@ -1,0 +1,16 @@
+{
+  "name": "ign-ol-classnotes",
+  "version": "1.0.0",
+  "description": "IGNOU Online Class Notes - Auto-generated GitHub Pages site",
+  "scripts": {
+    "build": "node scripts/generate-site.js",
+    "test": "node scripts/generate-site.js && echo Build successful!"
+  },
+  "keywords": ["notes", "ignou", "study"],
+  "author": "Abhay Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^9.1.2",
+    "gray-matter": "^4.0.3"
+  }
+}
