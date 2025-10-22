@@ -26,24 +26,30 @@ console.log(`Found ${markdownFiles.length} markdown files`);
 const noteCards = [];
 
 markdownFiles.forEach(file => {
-    const filePath = path.join(__dirname, '..', file);
-    const content = fs.readFileSync(filePath, 'utf-8');
-    
-    // Extract title from filename
-    const filename = path.basename(file, '.md');
-    const parts = filename.split('_');
-    
-    // Try to extract subject code and title
-    let subject = parts[0].toUpperCase();
-    let title = parts.slice(1).join(' ').replace(/-/g, ' ');
-    
-    // If title is empty, use filename
-    if (!title) {
-        title = filename.replace(/-/g, ' ');
-    }
-    
-    // Generate HTML content
-    const htmlContent = marked(content);
+    try {
+        const filePath = path.join(__dirname, '..', file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        
+        // Extract title from filename
+        const filename = path.basename(file, '.md');
+        const parts = filename.split('_');
+        
+        // Try to extract subject code and title
+        let subject = parts[0].toUpperCase();
+        let title = parts.slice(1).join(' ').replace(/-/g, ' ');
+        
+        // If title is empty, use filename
+        if (!title) {
+            title = filename.replace(/-/g, ' ').replace(/,/g, ' ');
+        } else {
+            title = title.replace(/,/g, ' ');
+        }
+        
+        // Clean up extra spaces
+        title = title.replace(/\s+/g, ' ').trim();
+        
+        // Generate HTML content
+        const htmlContent = marked(content);
     
     // Create HTML page for the note
     const noteHtml = `<!DOCTYPE html>
@@ -89,6 +95,9 @@ markdownFiles.forEach(file => {
         link: `notes/${htmlFileName}`,
         file: filename
     });
+    } catch (error) {
+        console.error(`Error processing file ${file}:`, error.message);
+    }
 });
 
 // Generate index.html
@@ -133,18 +142,23 @@ const indexHtml = `<!DOCTYPE html>
         <section class="notes-section">
             <h2>📖 Available Notes</h2>
             <div class="notes-grid" id="notes-grid">
-                ${noteCards.map(note => `
-                <div class="note-card" data-subject="${note.subject.toLowerCase()}" data-title="${note.title.toLowerCase()}">
+                ${noteCards.map(note => {
+                    const escapedSubject = note.subject.toLowerCase().replace(/"/g, '&quot;');
+                    const escapedTitle = note.title.toLowerCase().replace(/"/g, '&quot;');
+                    const escapedLink = note.link.replace(/"/g, '&quot;');
+                    return `
+                <div class="note-card" data-subject="${escapedSubject}" data-title="${escapedTitle}">
                     <div class="note-header">
                         <span class="subject-badge">${note.subject}</span>
                     </div>
                     <h3>${note.title}</h3>
                     <p class="note-description">${note.description}</p>
                     <div class="note-footer">
-                        <a href="${note.link}" class="btn view-btn">View Notes</a>
+                        <a href="${escapedLink}" class="btn view-btn">View Notes</a>
                     </div>
                 </div>
-                `).join('')}
+                `;
+                }).join('')}
             </div>
         </section>
         
