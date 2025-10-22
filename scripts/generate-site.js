@@ -14,9 +14,11 @@ if (!fs.existsSync(notesDir)) {
     fs.mkdirSync(notesDir, { recursive: true });
 }
 
-// Read all markdown files
+// Read all markdown files (exclude README and SETUP_INSTRUCTIONS)
 const markdownFiles = fs.readdirSync(__dirname + '/..')
-    .filter(file => file.endsWith('.md') && file !== 'README.md');
+    .filter(file => file.endsWith('.md') && 
+            file !== 'README.md' && 
+            file !== 'SETUP_INSTRUCTIONS.md');
 
 console.log(`Found ${markdownFiles.length} markdown files`);
 
