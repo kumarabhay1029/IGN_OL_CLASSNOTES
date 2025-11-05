@@ -417,9 +417,3 @@ A ───|⊝>── A(bar)
 | (sum of product)        | (product of sum)                 |
 
 ---
-
-> **Note:**  
-> All tables, diagrams, and explanations are preserved as per your original handwritten notes, now organized in a clear, professional, and easy-to-revise format.  
-> Emojis are used for section clarity and engagement.
-
----
