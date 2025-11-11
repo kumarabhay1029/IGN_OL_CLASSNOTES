@@ -57,7 +57,7 @@ markdownFiles.forEach(file => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} - Abhay's Notes Hub</title>
+    <title>${title} - Alex's Notes Hub</title>
     <link rel="stylesheet" href="../note-style.css">
 </head>
 <body>
@@ -74,7 +74,7 @@ markdownFiles.forEach(file => {
         </article>
     </main>
     <footer>
-        <p>&copy; ${new Date().getFullYear()} Abhay's Notes Hub. All rights reserved.</p>
+        <p>&copy; ${new Date().getFullYear()} Alex's Notes Hub. All rights reserved.</p>
     </footer>
 </body>
 </html>`;
@@ -106,14 +106,14 @@ const indexHtml = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhay's Notes Hub - IGNOU Study Notes</title>
+    <title>Alex's Notes Hub - IGNOU Study Notes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>📚 Abhay's Notes Hub</h1>
+                <h1>📚 Alex's Notes Hub</h1>
                 <p class="subtitle">IGNOU Study Notes & Resources</p>
             </div>
         </div>
@@ -170,7 +170,7 @@ const indexHtml = `<!DOCTYPE html>
     </main>
     
     <footer>
-        <p>&copy; ${new Date().getFullYear()} Abhay's Notes Hub. All rights reserved.</p>
+        <p>&copy; ${new Date().getFullYear()} Alex's Notes Hub. All rights reserved.</p>
         <p>Last updated: ${new Date().toLocaleString()}</p>
     </footer>
     
@@ -203,16 +203,22 @@ fs.writeFileSync(path.join(distDir, 'index.html'), indexHtml);
 // Copy CSS files
 const styleCSS = `/* Modern styling for the notes hub */
 :root {
-    --primary: #0366d6;
-    --primary-dark: #0256b8;
-    --secondary: #38bdf8;
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --secondary: #06b6d4;
+    --secondary-dark: #0891b2;
+    --accent: #8b5cf6;
     --bg: #f8fafc;
+    --bg-secondary: #f1f5f9;
     --card: #ffffff;
     --text: #0f172a;
     --text-muted: #64748b;
     --border: #e2e8f0;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -251,26 +257,50 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--secondary) 100%);
     color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
     text-align: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-xl);
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
 }
 
 .header-content h1 {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
-    font-weight: 700;
+    font-weight: 800;
     padding: 0 1rem;
     word-wrap: break-word;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
     font-size: clamp(0.9rem, 3vw, 1.2rem);
     opacity: 0.95;
     padding: 0 1rem;
+    position: relative;
+    font-weight: 500;
 }
 
 /* Search Section */
@@ -305,19 +335,29 @@ header {
 }
 
 .stat-card {
-    background: var(--card);
-    padding: 1.25rem;
-    border-radius: 12px;
+    background: linear-gradient(135deg, var(--card) 0%, var(--bg-secondary) 100%);
+    padding: 1.5rem;
+    border-radius: 16px;
     text-align: center;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
     min-width: 0;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
 }
 
 .stat-number {
     font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 700;
-    color: var(--primary);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 0.5rem;
 }
 
@@ -351,20 +391,37 @@ header {
 .note-card {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border-radius: 16px;
+    padding: 1.5rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
     min-width: 0;
     overflow: hidden;
+    position: relative;
+}
+
+.note-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--secondary) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.note-card:hover::before {
+    transform: scaleX(1);
 }
 
 .note-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
 }
 
 .note-header {
@@ -373,14 +430,17 @@ header {
 
 .subject-badge {
     display: inline-block;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    border-radius: 24px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     word-break: break-word;
     max-width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .note-card h3 {
@@ -424,21 +484,23 @@ header {
 }
 
 .view-btn {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: white;
     flex: 1;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .view-btn:hover {
-    background: var(--primary-dark);
-    transform: scale(1.02);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
 }
 
 /* About Section */
 .about-section {
-    background: var(--card);
-    padding: 1.5rem;
-    border-radius: 12px;
+    background: linear-gradient(135deg, var(--card) 0%, var(--bg-secondary) 100%);
+    padding: 2rem;
+    border-radius: 16px;
     margin: 2rem 0;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
@@ -514,14 +576,21 @@ footer p {
 
 const noteStyleCSS = `/* Styling for individual note pages */
 :root {
-    --primary: #0366d6;
-    --primary-dark: #0256b8;
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --accent: #8b5cf6;
+    --secondary: #06b6d4;
     --bg: #f8fafc;
+    --bg-secondary: #f1f5f9;
     --card: #ffffff;
     --text: #0f172a;
     --text-muted: #64748b;
     --border: #e2e8f0;
     --code-bg: #f1f5f9;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -552,11 +621,30 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary) 0%, #38bdf8 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--secondary) 100%);
     color: white;
-    padding: 1.5rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+    box-shadow: var(--shadow-lg);
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
 }
 
 .back-link {
@@ -564,14 +652,16 @@ header {
     color: white;
     text-decoration: none;
     margin-bottom: 1rem;
-    font-weight: 600;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+    font-weight: 700;
+    opacity: 0.95;
+    transition: var(--transition);
     font-size: clamp(0.9rem, 2.5vw, 1rem);
+    position: relative;
 }
 
 .back-link:hover {
     opacity: 1;
+    transform: translateX(-4px);
 }
 
 header h1 {
@@ -579,6 +669,10 @@ header h1 {
     margin-bottom: 0.5rem;
     word-wrap: break-word;
     padding: 0 0.5rem;
+    position: relative;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
 }
 
 .subject-tag {
@@ -708,12 +802,57 @@ main {
 .note-content a {
     color: var(--primary);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+    font-weight: 600;
 }
 
 .note-content a:hover {
     border-bottom-color: var(--primary);
+    color: var(--primary-dark);
+}
+
+/* Images */
+.note-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.note-content img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Image with link wrapper */
+.note-content a img {
+    cursor: pointer;
+}
+
+.note-content p > a:has(img) {
+    border-bottom: none;
+    display: block;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.note-content p > a:has(img)::after {
+    content: '🔗 Click to view full image';
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.note-content p > a:has(img):hover::after {
+    color: var(--primary);
 }
 
 /* Footer */

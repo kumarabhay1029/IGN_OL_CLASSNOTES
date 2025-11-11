@@ -1,4 +1,4 @@
-# 📚 Abhay's Notes Hub - IGNOU Study Notes
+# 📚 Alex's Notes Hub - IGNOU Study Notes
 
 This repository contains comprehensive study notes for IGNOU courses, automatically published to GitHub Pages.
 
