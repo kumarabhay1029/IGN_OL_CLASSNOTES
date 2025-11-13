@@ -33,6 +33,16 @@ jobs:
       - name: Generate site from markdown
         run: node scripts/generate-site.js
       
+      - name: Add .nojekyll file
+        run: touch ./dist/.nojekyll
+      
+      - name: List generated files
+        run: |
+          echo "Files in dist directory:"
+          ls -la ./dist/
+          echo "Files in dist/notes directory:"
+          ls -la ./dist/notes/ || echo "Notes directory not found"
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
