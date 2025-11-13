@@ -32,7 +32,8 @@ const markdownFiles = fs.readdirSync(__dirname + '/..')
             file !== 'SETUP_INSTRUCTIONS.md' &&
             file !== 'IMPLEMENTATION_COMPLETE.md' &&
             file !== 'QUICK_START.md' &&
-            file !== 'DEPLOYMENT_FIX.md');
+            file !== 'DEPLOYMENT_FIX.md' &&
+            file !== 'FINAL_STATUS.md');
 
 console.log(`Found ${markdownFiles.length} markdown files`);
 
