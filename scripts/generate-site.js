@@ -71,13 +71,13 @@ markdownFiles.forEach(file => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} - Abhay's Notes Hub</title>
+    <title>${title} - Student Initiative Group Notes Hub</title>
     <link rel="stylesheet" href="../note-style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="../index.html" class="back-link">GåÉ Back to Notes</a>
+            <a href="../index.html" class="back-link">â† Back to Notes</a>
             <h1>${title}</h1>
             <p class="subject-tag">${subject}</p>
         </div>
@@ -88,7 +88,7 @@ markdownFiles.forEach(file => {
         </article>
     </main>
     <footer>
-        <p>&copy; ${new Date().getFullYear()} Abhay's Notes Hub. All rights reserved.</p>
+        <p>&copy; ${new Date().getFullYear()} Student Initiative Group Notes Hub. All rights reserved.</p>
     </footer>
 </body>
 </html>`;
@@ -120,14 +120,14 @@ const indexHtml = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhay's Notes Hub - IGNOU Study Notes</title>
+    <title>Student Initiative Group Notes Hub - IGNOU Study Notes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>=ƒôÜ Abhay's Notes Hub</h1>
+                <h1>ğŸ“š Student Initiative Group Notes Hub</h1>
                 <p class="subtitle">IGNOU Study Notes & Resources</p>
             </div>
         </div>
@@ -135,7 +135,7 @@ const indexHtml = `<!DOCTYPE html>
     
     <main class="container">
         <section class="search-section">
-            <input type="text" id="search-bar" placeholder="=ƒöì Search notes by subject or topic...">
+            <input type="text" id="search-bar" placeholder="ğŸ” Search notes by subject or topic...">
         </section>
         
         <section class="stats">
@@ -154,7 +154,7 @@ const indexHtml = `<!DOCTYPE html>
         </section>
         
         <section class="notes-section">
-            <h2>=ƒôû Available Notes</h2>
+            <h2>ğŸ“– Available Notes</h2>
             <div class="notes-grid" id="notes-grid">
                 ${noteCards.map(note => {
                     const escapedSubject = note.subject.toLowerCase().replace(/"/g, '&quot;');
@@ -178,13 +178,13 @@ const indexHtml = `<!DOCTYPE html>
         
         <section class="about-section">
             <h2>About This Hub</h2>
-            <p>This is a collection of study notes for IGNOU courses. Notes are automatically updated when new content is added to the repository. Share with your friends and study together! =ƒÄô</p>
+            <p>This is a collection of study notes for IGNOU courses. Notes are automatically updated when new content is added to the repository. Share with your friends and study together! ğŸ“</p>
             <p><strong>How to use:</strong> Browse the notes above, use the search bar to find specific topics, and click "View Notes" to read them.</p>
         </section>
     </main>
     
     <footer>
-        <p>&copy; ${new Date().getFullYear()} Abhay's Notes Hub. All rights reserved.</p>
+        <p>&copy; ${new Date().getFullYear()} Student Initiative Group Notes Hub. All rights reserved.</p>
         <p>Last updated: ${new Date().toLocaleString()}</p>
     </footer>
     
@@ -856,7 +856,7 @@ main {
 }
 
 .note-content p > a:has(img)::after {
-    content: '=ƒöù Click to view full image';
+    content: '=ï¿½ï¿½ï¿½ Click to view full image';
     display: block;
     margin-top: 0.5rem;
     font-size: 0.85rem;
@@ -925,6 +925,6 @@ footer {
 fs.writeFileSync(path.join(distDir, 'style.css'), styleCSS);
 fs.writeFileSync(path.join(distDir, 'note-style.css'), noteStyleCSS);
 
-console.log('G£à Site generated successfully!');
-console.log(`=ƒô¥ Generated ${noteCards.length} note pages`);
-console.log(`=ƒôü Output directory: ${distDir}`);
+console.log('Gï¿½ï¿½ Site generated successfully!');
+console.log(`=ï¿½ï¿½ï¿½ Generated ${noteCards.length} note pages`);
+console.log(`=ï¿½ï¿½ï¿½ Output directory: ${distDir}`);
