@@ -28,7 +28,7 @@ jobs:
           node-version: '18'
       
       - name: Install dependencies
-        run: npm install marked gray-matter
+        run: npm install marked gray-matter mammoth
       
       - name: Generate site from markdown
         run: node scripts/generate-site.js

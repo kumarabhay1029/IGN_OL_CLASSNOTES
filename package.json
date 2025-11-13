@@ -1,7 +1,7 @@
 {
   "name": "ign-ol-classnotes",
-  "version": "1.0.0",
-  "description": "IGNOU Online Class Notes - Auto-generated GitHub Pages site",
+  "version": "2.0.0",
+  "description": "IGNOU Online Class Notes - Auto-generated GitHub Pages site with PDF, DOCX, and image support",
   "scripts": {
     "build": "node scripts/generate-site.js",
     "test": "node scripts/generate-site.js && echo Build successful!"
@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "marked": "^9.1.2",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "mammoth": "^1.6.0"
   }
 }
